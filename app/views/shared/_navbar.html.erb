@@ -1,0 +1,13 @@
+<nav>
+  <ul>
+  <li>
+  <%= link_to 'inicia sesion', new_user_session_path %>
+  </li>
+  <li>
+  <%= link_to 'registrate', new_user_registration_path %>
+  </li>
+  <li>
+  <%= button_to 'cierra sesion', destroy_user_session_path, method: :delete %>
+  </li>
+  </ul>
+  </nav>
