@@ -1,14 +1,26 @@
 <nav>
-      <% if user %>
   <ul>
+  <% if user_signed_in? %>
   <li>
-  <%= link_to 'inicia sesion', new_user_session_path %>
+  <%= current_user.email %>
   </li>
+  
+  <li>
+  <%= button_to 'cierra sesion', destroy_user_session_path, method: :delete %>
+  </li>
+  <li>
+  <%= link_to "New publication", new_publication_path %>
+  </li>
+  <% else %>
   <li>
   <%= link_to 'registrate', new_user_registration_path %>
   </li>
   <li>
+  <%= link_to 'inicia sesion', new_user_session_path %>
+  </li>
+  <li>
   <%= button_to 'cierra sesion', destroy_user_session_path, method: :delete %>
   </li>
+  <% end %>
   </ul>
   </nav>
