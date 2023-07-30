@@ -15,6 +15,9 @@
   <li>
   <%= link_to "Publicaciones", publications_path %>
   </li>
+  <li class="nav-item">
+ <%= link_to 'Tus reacciones', my_reactions_path, class: 'nav-link' %>
+ </li>
   <% else %>
   <li>
   <%= link_to 'registrate', new_user_registration_path %>

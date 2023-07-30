@@ -6,6 +6,8 @@ class Reaction < ApplicationRecord
  accept: %w[like dislike boring neutral uninterested interested],
  }
 
- 
+ def self.kinds
+      %w[like dislike boring neutral uninterested interested]
+      end
      
 end
