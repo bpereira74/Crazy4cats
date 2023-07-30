@@ -8,8 +8,12 @@
   <li>
   <%= button_to 'cierra sesion', destroy_user_session_path, method: :delete %>
   </li>
+  <% link_to 'Editar perfil', edit_user_registration_path %>
   <li>
-  <%= link_to "New publication", new_publication_path %>
+  <%= link_to "Nueva publicacion", new_publication_path %>
+  </li>
+  <li>
+  <%= link_to "Publicaciones", publications_path %>
   </li>
   <% else %>
   <li>
