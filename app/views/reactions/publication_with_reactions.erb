@@ -5,14 +5,14 @@
  <%= publication.name %> -
  <%= publication.reactions.find_by(user_id: current_user.id).kind %>
  <p>
- <%= link_to "Show this product", publication %>
+ <%= link_to "Show this publication", publication %>
  </p>
  </li>
  <li>
  <%= publication.name %> -
  <%= publication.find_kind_user_relation(current_user) %>
  <p>
- <%= link_to "Show this product", publication %>
+ <%= link_to "Show this publication", publication %>
  </p>
  </li>
  <% end %>

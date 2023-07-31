@@ -1,33 +1,41 @@
-<nav>
-  <ul>
+<nav class="bg-dark border-bottom border-body navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
+  <div class="container">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <a class="navbar-brand" href="#">Crazy4Cats</a>
+  <ul class="navbar-nav">
   <% if user_signed_in? %>
-  <li>
-  <%= current_user.email %>
-  </li>
-  
-  <li>
-  <%= button_to 'cierra sesion', destroy_user_session_path, method: :delete %>
-  </li>
-  <% link_to 'Editar perfil', edit_user_registration_path %>
-  <li>
-  <%= link_to "Nueva publicacion", new_publication_path %>
-  </li>
-  <li>
-  <%= link_to "Publicaciones", publications_path %>
+  <li class="nav-item nav-link">
+  <%= current_user.email%>
   </li>
   <li class="nav-item">
- <%= link_to 'Tus reacciones', my_reactions_path, class: 'nav-link' %>
- </li>
+  <% link_to 'Editar perfil', edit_user_registration_path, class: 'nav-link' %>
+  </li>
+  <li class="nav-item">
+  <%= link_to "Nueva publicacion", new_publication_path, class: 'nav-link' %>
+  </li>
+  <li class="nav-item">
+  <%= link_to "Publicaciones", publications_path, class: 'nav-link' %>
+  </li>
+  <li class="nav-item">
+  <%= link_to 'Tus reacciones', my_reactions_path, class: 'nav-link' %>
+  </li>
+  <li class="nav-item">
+  <%= link_to 'Comentarios', comments_path, class: 'nav-link' %>
+  </li>
+ <li class="nav-item">
+   <%= button_to 'Cierra sesion', destroy_user_session_path, method: :delete , class: 'nav-link' %>
+  </li >
   <% else %>
-  <li>
-  <%= link_to 'registrate', new_user_registration_path %>
+  <li class="nav-item">
+  <%= link_to 'Registrate', new_user_registration_path %>
   </li>
-  <li>
-  <%= link_to 'inicia sesion', new_user_session_path %>
+  <li class="nav-item">
+  <%= link_to 'Inicia sesion', new_user_session_path %>
   </li>
-  <li>
-  <%= button_to 'cierra sesion', destroy_user_session_path, method: :delete %>
+  <li class="nav-item">
+  <%= button_to 'Cierra sesion', destroy_user_session_path, method: :delete %>
   </li>
   <% end %>
   </ul>
+  </div>
   </nav>

@@ -1,24 +1,28 @@
 <div id="<%= dom_id publication %>">
 
-  <p>
-    <strong>Image:</strong>
-    <%= publication.image %>
-    <%# <%= f.file_field :image %>
-  </p>
-
-  <p>
+<div class="col-4">
+     <div class="card">
+     <div class="card-body">
+       <h5 class="card-title">Publicación</h5>
+  <p class="card"></p>
+  <strong>Image:</strong>
+  <img src=<%= publication.image %> class="card-img-top" alt="...">
+   </p> 
+  <p class="card-text">
     <strong>Title:</strong>
     <%= publication.title %>
   </p>
 
-  <p>
+  <p class="card-text">
     <strong>Description:</strong>
     <%= publication.description %>
   </p>
 
-  <p>
+  <p class="card-text">
     <strong>User:</strong>
     <%= publication.user_id %>
   </p>
 
+</div>
+</div>
 </div>

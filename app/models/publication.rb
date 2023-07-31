@@ -3,7 +3,7 @@ class Publication < ApplicationRecord
  :recoverable, :rememberable, :validatable
       belongs_to :user
   has_one_attached :image
-  has_many :reactions dependent: :destroy
+  has_many :reactions
   has_many :users, through: :reactions
 
   def count_with_kind(arg)

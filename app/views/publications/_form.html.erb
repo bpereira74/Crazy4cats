@@ -11,27 +11,37 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="mb-3">
     <%= form.label :image, style: "display: block" %>
-    <%= form.text_field :image %>
+    <%= form.file_field :image %>
   </div>
 
-  <div>
+  <div class="mb-3">
+   <label for="exampleFormControlInput1" class="form-label">
     <%= form.label :title, style: "display: block" %>
+    </label>
+    <label for="exampleFormControlTextarea1" class="form-label">
     <%= form.text_field :title %>
+    </label>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">
+    <%= form.label :description, style: "display: block" %></label>
+    <label for="exampleFormControlTextarea1" class="form-label">
     <%= form.text_area :description %>
+    </label>
   </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">
+    <%= form.label :user_id, style: "display: block" %></label>
+   <label for="exampleFormControlTextarea1" class="form-label">
     <%= form.text_field :user_id %>
+    </label>
   </div>
 
-  <div>
+  <div class="mb-3">
     <%= form.submit %>
   </div>
 <% end %>

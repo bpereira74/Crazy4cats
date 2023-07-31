@@ -14,7 +14,7 @@ class PublicationsController < ApplicationController
   # GET /publications/new
   def new
     @publication = Publication.new
-    @publication = current_user.publication.build
+    @publication = current_user.publications.build
   end
 
   # GET /publications/1/edit
